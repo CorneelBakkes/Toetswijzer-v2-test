@@ -1,5 +1,5 @@
 # Toetswijzer v2.1
-Dit is een afzonderlijke testrepository van de Toetswijzer voor Pabo Sittard. De oorspronkelijke repository [CorneelBakkes/Toetswijzer](https://github.com/CorneelBakkes/Toetswijzer) blijft ongewijzigd.
+Dit is een afzonderlijke testrepository van de Toetswijzer voor Pabo Sittard. 
 ## Start
 Open de gepubliceerde GitHub Pages-site via de repository-instellingen of open lokaal [index.html](index.html).
 Deze versie bevat de Toetswijzer v2.1-testsite, bulkbeheer-Excel, handleiding, testrapport en migratiecontrole.
