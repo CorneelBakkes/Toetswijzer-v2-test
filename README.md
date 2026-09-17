@@ -1,9 +1,17 @@
-# Toetswijzer v2.1
-Dit is een afzonderlijke testrepository van de Toetswijzer voor Pabo Sittard. 
+# Toetswijzer
+
+De Toetswijzer voor Pabo Sittard.
+
 ## Start
-Open de gepubliceerde GitHub Pages-site via de repository-instellingen of open lokaal [index.html](index.html).
-Deze versie bevat de Toetswijzer v2.1-testsite, bulkbeheer-Excel, handleiding, testrapport en migratiecontrole.
-## Belangrijk
-- Dit is geen live productiesite.
-- Er is geen rechtstreekse koppeling met GitHub, Canvas, SharePoint, Progress, Gradework of Outlook.
-Zie [Handleiding](Handleiding.html) en [Testrapport](Testrapport.html) voordat je wijzigingen beoordeelt of een liveversie voorbereidt.
+
+Open de gepubliceerde site: https://corneelbakkes.github.io/Toetswijzer-v2-test/
+
+## Beheer
+
+Gebruik de beheerknop rechtsonder in de Toetswijzer. De Excel is bedoeld voor bulkbeheer en import/export.
+
+## Bestanden
+
+- `index.html` — de gepubliceerde Toetswijzer
+- `Toetswijzer_vereenvoudigd.xlsx` — beheer-Excel
+- [Handleiding](Handleiding.html) — werkwijze voor beheer
