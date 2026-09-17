@@ -1,0 +1,240 @@
+<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Toetswijzer 2.1 — Handleiding</title><style>:root{font-family:Arial,sans-serif;color:#292333;background:#f4f1f6}body{max-width:1060px;margin:28px auto;padding:36px;background:white;line-height:1.6;border-top:6px solid #663366}h1,h2,h3{color:#663366;line-height:1.25}h1{font-size:30px}h2{margin-top:38px}a{color:#5a2870}table{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0}th,td{padding:10px;border:1px solid #d8d1dd;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eee8f2}code{background:#f3edf4;padding:2px 4px;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#f3edf4;padding:14px}li{margin:8px 0}blockquote{border-left:5px solid #b96a12;padding:10px 18px;background:#fff7e5;margin:18px 0}nav{font-size:14px;padding-bottom:15px;border-bottom:1px solid #ddd}img{max-width:100%}@media(max-width:700px){body{margin:0;padding:18px}table{font-size:12px}td,th{padding:6px}}@media print{body{margin:0;padding:0;border:0;max-width:none}nav{display:none}h2,h3{break-after:avoid}tr,blockquote{break-inside:avoid}a{color:inherit}table{font-size:10px}}</style><body><nav><a href="toetswijzer-v2.1-test.html">Test-HTML openen</a> · <a href="Handleiding.html">Handleiding</a> · <a href="Testrapport.html">Testrapport</a></nav><main><h1>Toetswijzer 2.1 — handleiding voor de testversie</h1>
+<p>Versie 17 september 2026 · collegejaar 2026-2027 · gebaseerd op het aangeleverde Toetswijzer_v2.zip en de inhoudelijke besluiten uit ‘Canvas JavaScript beperking’.</p>
+<h2>1. Start veilig</h2>
+<p>Pak het ZIP-bestand uit en open <strong>toetswijzer-v2.1-test.html</strong> in Edge of Chrome. Het bestand werkt zelfstandig; de bronbestanden in <code>src</code> zijn voor onderhoud. De huidige live index is niet gewijzigd. Deze versie heeft geen rechtstreekse verbinding met GitHub, Canvas, SharePoint of Outlook. Klikken op een TIF- of toetslink opent uiteraard wel die externe bestemming.</p>
+<p>Gebruik eerst het jaaroverzicht als student en daarna <strong>Beheer</strong>. Het bestaande beheerwachtwoord is behouden. Dit is een ander wachtwoord dan het Excel-wachtwoord. De beheerpoort in een lokaal HTML-bestand is alleen een bedieningsdrempel: gegevens en programmacode zijn niet geheim. Bewaar geen persoonsgegevens, tokens of geheime sleutels in dit project.</p>
+<p>Voorstellen bestaan tijdens de browsersessie. Sluiten of vernieuwen kan niet-gedownloade wijzigingen wissen. Een wijziging is pas veilig bewaard nadat je hebt bevestigd én de nieuwe HTML hebt gedownload. Niets wordt automatisch gepubliceerd.</p>
+<h2>2. Eerst: bestaande brongegevens controleren</h2>
+<p>De migratie behoudt 171 rondes met 678 momenten en hun bestaande technische IDs. Vier rondes voor VWNL/VWRW zijn uit de actieve gegevens gehaald en gearchiveerd. Beoordeling-start is verwijderd; de bronrecords blijven in het migratiearchief. Namen, codes en momentlabels zijn aangepast zonder datums of tijden te verzinnen.</p>
+<p><strong>64 rondes vragen inhoudelijke controle</strong>: de bron bevat een ontbrekende/niet-toegestane kans of een toets/doelgroepcombinatie die niet past bij de nieuwe afspraken. Ze blijven in beheer en Excel staan, maar verschijnen niet als definitieve momenten in de studentenweergave of Outlook-uitvoer. Het jaaroverzicht meldt dat er nog bronrondes op controle wachten. Kies <strong>Momenten beheren → Alleen rondes met migratiecontrole</strong> en herstel elke ronde op basis van het officiële rooster. Het volledige overzicht staat ook in <code>migratiecontrole.json</code> en in het testrapport.</p>
+<p>Daarnaast zijn drie ENG-rondes zonder momenten/datum behouden. Ze staan apart boven het beheerformulier bij <strong>Rondes waarvoor de datum nog ontbreekt</strong>. Kies <strong>Eerste moment toevoegen</strong> zodra de datum is vastgesteld. Een leeg moment wordt niet als een fictieve datum in Excel opgenomen.</p>
+<p>De bestaande datumvensters, meerdere tijdvarianten, blokkades en bronwaarschuwingen blijven behouden. Controleer ze inhoudelijk. Een technisch geslaagde import maakt onzekere broninformatie niet definitief.</p>
+<h2>3. Momenten beheren — de normale werkwijze</h2>
+<ol>
+<li>Kies een of meer <strong>Doelgroepen</strong>. Je kunt de zes doelgroepen combineren.</li>
+<li>Kies de <strong>Toets</strong>. De lijst bevat alleen toetsen die bij alle geselecteerde doelgroepen passen.</li>
+<li>Alleen als een uitfaserende doelgroep is gekozen: kies <strong>Eerste kans</strong> of <strong>Tweede kans</strong>. TGO heeft geen kansveld. Een gemengde ronde gebruikt de kans uitsluitend voor de uitfaserende doelgroep. Voor verschillende kansen of datums maak je afzonderlijke rondes.</li>
+<li>Kies het <strong>Momenttype</strong> en vul de verplichte <strong>Datum</strong> in.</li>
+<li>Dag en collegeweek verschijnen automatisch. Een collegeweek wordt alleen getoond als de gekoppelde kalender of brongegevens een eenduidig nummer leveren. Anders verschijnt <strong>Kalender ontbreekt</strong>. Er wordt niet stilzwijgend door vakanties heen geteld. Leg ontbrekende weekkoppelingen vast bij de gecontroleerde jaarovergang; laat een onzekere collegeweek niet voor een officieel nummer doorgaan.</li>
+<li>Begin- en eindtijd zijn optioneel. Leeg of <strong>Tijd onbekend</strong> betekent dat geen tijd wordt verzonnen. Een eindtijd vereist een begintijd en moet bij dezelfde datum later liggen. Bestaande datumvensters/tijdvarianten staan in een apart uitklapvak.</li>
+<li>Voeg eventueel een toelichting toe. Kies <strong>Actief</strong> of <strong>Vervallen</strong>.</li>
+<li>Klik <strong>Neem op in wijzigingsvoorstel</strong>. Voeg desgewenst meer wijzigingen toe.</li>
+<li>Ga naar <strong>Excel en bevestigen</strong>. Controleer nieuwe, gewijzigde en vervallen gegevens en alle waarschuwingen. Vul de toelichting in en bevestig. Bij verval moet je ook <strong>VERVALLEN</strong> typen.</li>
+<li>Download de nieuwe <strong>test-HTML</strong>, het wijzigingenrapport en zo nodig de bijbehorende Excel. Open de nieuwe HTML lokaal en gebruik voortaan die versie als basis.</li>
+</ol>
+<p>Gebruik in de momentenlijst <strong>Wijzigen</strong> voor een bestaand moment en <strong>Moment toevoegen</strong> voor een extra moment bij dezelfde ronde. Toets, doelgroepen en kans zijn rondegegevens: een wijziging geldt voor alle momenten in die ronde. Een nieuw los moment krijgt automatisch eigen IDs. Per ronde is één moment van elk type toegestaan; maak een afzonderlijke ronde voor een extra afname.</p>
+<p>Zichtbaarheid en Outlook-categorie worden automatisch bepaald. Er zijn geen losse velden meer waarin je deze kunt tegenspreken.</p>
+<h2>4. Momenttypen, zichtbaarheid en categorieën</h2>
+<table>
+<thead>
+<tr>
+<th>Momenttype</th>
+<th>Student</th>
+<th>Outlook-categorie</th>
+<th>Kleur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Toetsafname</td>
+<td>Ja</td>
+<td>TOETS</td>
+<td>Rood</td>
+</tr>
+<tr>
+<td>Start inleveren</td>
+<td>Ja</td>
+<td>INLEVEREN</td>
+<td>Oranje</td>
+</tr>
+<tr>
+<td>Inlevermoment</td>
+<td>Ja</td>
+<td>INLEVEREN</td>
+<td>Oranje</td>
+</tr>
+<tr>
+<td>Start intekenen</td>
+<td>Ja</td>
+<td>INSCHRIJVEN</td>
+<td>Blauw</td>
+</tr>
+<tr>
+<td>Deadline intekenen</td>
+<td>Ja</td>
+<td>INSCHRIJVEN</td>
+<td>Blauw</td>
+</tr>
+<tr>
+<td>Deadline uittekenen</td>
+<td>Ja</td>
+<td>INSCHRIJVEN</td>
+<td>Blauw</td>
+</tr>
+<tr>
+<td>Publicatie beoordeling</td>
+<td>Ja</td>
+<td>BEOORDELING</td>
+<td>Paars</td>
+</tr>
+<tr>
+<td>Inzage</td>
+<td>Ja</td>
+<td>INZAGE</td>
+<td>Groen</td>
+</tr>
+<tr>
+<td>Beoordelingsdeadline</td>
+<td>Nee, alleen beheer</td>
+<td>BEOORDELING</td>
+<td>Paars</td>
+</tr>
+</tbody></table>
+<p><strong>Start intekenen</strong> is het moment vanaf wanneer een student in Progress kan intekenen. <strong>Deadline intekenen</strong> is het laatste moment om dat te doen. <strong>Deadline uittekenen</strong> is het laatste moment om zich in Progress uit te tekenen. Deze uitleg staat ook bij de studentenweergave. De Toetswijzer schrijft niemand zelf in of uit.</p>
+<p>Beoordeling-start, Beoordeling-eindmoment en Uittekenen-moment zijn geen invoeropties meer. Bestaande beoordelings-eindmomenten en uittekenmomenten zijn naar de betreffende deadline gemigreerd. Beoordelingsdeadlines worden niet in de gewone studentenmomenten, studentenagenda, wijzigingenoverzichten of gegenereerde studentberichten weergegeven. De onderliggende HTML is echter geen beveiligde opslag voor vertrouwelijke gegevens. Schrijf geen interne informatie in de openbare wijzigingstoelichting.</p>
+<h2>5. Doelgroepen en toetscatalogus</h2>
+<p>De zes doelgroepen zijn <strong>TGO Voltijd P-fase</strong>, <strong>TGO Voltijd PP-fase</strong>, <strong>TGO Deeltijd P-fase</strong>, <strong>TGO Deeltijd PP-fase</strong>, <strong>Uitfaserend Voltijd</strong> en <strong>Uitfaserend Deeltijd</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Toets</th>
+<th>Naam</th>
+<th>TGO-EvL of route</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>KAL</td>
+<td>Kennistoets Andere Leergebieden</td>
+<td>S-AL; TGO PP</td>
+</tr>
+<tr>
+<td>CGI</td>
+<td>Criteriumgericht interview</td>
+<td>Alleen Uitfaserend Deeltijd; geen TGO-EvL</td>
+</tr>
+<tr>
+<td>ENG</td>
+<td>Mondeling Engels</td>
+<td>S-OKV + S-AL; TGO en beide uitfaserende curricula</td>
+</tr>
+<tr>
+<td>VGT-G</td>
+<td>Voortgangstoets Generiek</td>
+<td>Alleen Uitfaserend Deeltijd</td>
+</tr>
+<tr>
+<td>HTT</td>
+<td>Hogeschooltaaltoets (4F)</td>
+<td>U-OPI + U-VPP; TGO</td>
+</tr>
+<tr>
+<td>HTT3</td>
+<td>Hogeschooltaaltoets (3F)</td>
+<td>Alleen Uitfaserend Deeltijd, tot en met 2026-2027</td>
+</tr>
+<tr>
+<td>KVV</td>
+<td>Kennistoets Vakdidactiek en vakinhoud</td>
+<td>S-OKV + S-VVP; TGO</td>
+</tr>
+<tr>
+<td>LKT-NL</td>
+<td>Landelijke Kennistoets Nederlands</td>
+<td>S-BV; TGO PP en bestaande uitfaserende routes</td>
+</tr>
+<tr>
+<td>LKT-RW</td>
+<td>Landelijke Kennistoets Rekenen-Wiskunde</td>
+<td>S-BV; TGO PP en bestaande uitfaserende routes</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>Portfolio</td>
+<td>Alle EvL’s voor TGO; bestaande route Uitfaserend Deeltijd behouden</td>
+</tr>
+<tr>
+<td>PROD</td>
+<td>(Beroeps)producten</td>
+<td>Alleen Uitfaserend Voltijd</td>
+</tr>
+<tr>
+<td>RWT</td>
+<td>Landelijke Reken- en Wiskundetoets</td>
+<td>S-OKV; TGO P en beide uitfaserende curricula</td>
+</tr>
+<tr>
+<td>THEMA10 / THEMA11 / THEMA9</td>
+<td>Thematoets thema 10 / 11 / 9 JK/OK</td>
+<td>Alleen Uitfaserend Voltijd</td>
+</tr>
+<tr>
+<td>THEMA4 / THEMA5 / THEMA6 / THEMA7</td>
+<td>Thematoets thema 4 / 5 / 6 / 7</td>
+<td>Alleen Uitfaserend Voltijd</td>
+</tr>
+<tr>
+<td>WPL</td>
+<td>Werkplekleren</td>
+<td>Alleen Uitfaserend Voltijd</td>
+</tr>
+</tbody></table>
+<p>VWNL en VWRW zijn verwijderd. De migratie herkent <strong>AND → KAL</strong>, <strong>GEN → VGT-G</strong>, <strong>LKTNL → LKT-NL</strong>, <strong>LKTRW → LKT-RW</strong>. De bestaande ronde- en moment-IDs veranderen daardoor niet.</p>
+<p>PORT bewaart de semantische koppeling <strong>ALLE_EVL</strong>, niet een uitgeschreven lijst van huidige EvL-IDs. De studentweergave haalt de actuele EvL-catalogus op. Een later toegevoegde EvL valt daardoor ook onder deze koppeling. Uitfaserende routes krijgen geen kunstmatige TGO-EvL.</p>
+<h2>6. Toetslinks en EvL’s</h2>
+<p>Ga naar <strong>Toetslinks en EvL’s</strong>, kies één doelgroep en de toets en plak de exacte <strong>Progress-intekenlink</strong> en <strong>Gradework-resultaatlink</strong>. Deze velden horen bij de combinatie <strong>Toets + Doelgroep</strong>, niet bij de hele website of één datum. De adressen blijven ongewijzigd, inclusief codering en queryparameters. Gebruik volledige HTTPS-links zonder spaties aan begin of einde. Sla de links op in het voorstel en bevestig dat voorstel zoals hierboven.</p>
+<p>Een leeg veld betekent geen specifieke knop. Algemene startpagina’s worden niet als een specifieke inschrijf- of resultaatlink ingevuld. Studenten zien de Progress-knop bij intekenen en, als een publicatiemoment aanwezig is, de Gradework-knop bij <strong>Publicatie beoordeling</strong>. Rechten en sessies in Progress/Gradework blijven nodig; de Toetswijzer kan die niet verlenen.</p>
+<p>De TGO-catalogus bevat U-OPI Ontwikkeling Professionele Identiteit; S-OKV Ontwikkeling Kennis en Vaardigheid; U-RLA Realisatie van leeractiviteiten; S-VVP Vakinhoudelijk en vakdidactisch portfolio; S-RLT Realisatie van leertrajecten; S-AL Andere leergebieden; S-BV Basisvaardigheden; U-LEO Leer- en ontwikkelomgeving; S-VVV Verdieping vakintegratie en vakoverstijgend werken; U-OV Onderzoekend vermogen; U-PI Professionele Identiteit; U-VPP Verantwoordelijkheid primair proces; en PROF Profileringsleeruitkomst(en).</p>
+<p>De twaalf aangeleverde TIF-links staan bij deze EvL’s, ook als de bestandsnaam ‘concept’ vermeldt. Voor Profileringsleeruitkomst(en) is geen specifieke TIF-link aangeleverd; daar staat dit expliciet bij. Er zijn geen adressen verzonnen. TIF-links openen SharePoint; er is niets op SharePoint gewijzigd en de toegangsrechten zijn niet getest.</p>
+<h2>7. Vereenvoudigde Excel — bulk, niet de hoofdinterface</h2>
+<p>Download eerst de actuele Excel uit de HTML-versie die je gebruikt. De meegeleverde <strong>Toetswijzer_vereenvoudigd.xlsx</strong> hoort bij de meegeleverde begintoestand. Na een bevestigde wijziging moet je de nieuwe Excel downloaden.</p>
+<p>Er zijn drie zichtbare tabbladen:</p>
+<table>
+<thead>
+<tr>
+<th>Tabblad</th>
+<th>Gebruik</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Momenten</td>
+<td>Eén rij per moment; doelgroep(en) eerst, daarna toets, kans, momenttype, datum, tijden, toelichting en status</td>
+</tr>
+<tr>
+<td>Links</td>
+<td>Specifieke Progress- en Gradework-link per toets en doelgroep</td>
+</tr>
+<tr>
+<td>Lees mij</td>
+<td>Beknopte uitleg en het beveiligingswachtwoord</td>
+</tr>
+</tbody></table>
+<p>Dag en collegeweek worden berekend. De toetskeuzelijst volgt de doelgroepcombinatie. Excel gebruikt hiervoor één keuze met een samengestelde doelgroepnaam, bijvoorbeeld ‘TGO Voltijd P-fase + TGO Deeltijd P-fase’; het zijn geen meerdere vinkjes in één cel. Op de website gebruik je wel vinkjes. Combinaties zonder gemeenschappelijke toets leveren een lege toetslijst op.</p>
+<p>TGO: Kans leeg laten. Uitfaserend: Eerste kans of Tweede kans. Datum is verplicht; tijden zijn optioneel. Bestaande perioden en meerdere tijdvarianten staan in <strong>Einddatum (venster)</strong> en <strong>Brontijd (varianten)</strong>, zodat de conversie ze niet weggooit. Wil je één begin/eindtijd vastleggen, wis dan bewust de brontijd. <strong>Controle</strong> toont bronproblemen uit de geëxporteerde versie; na wijziging doet de website de definitieve validatie opnieuw.</p>
+<p>Technische ronde-/moment-IDs zijn verborgen en vergrendeld. Laat ze bij bestaande rijen intact. Gebruik voor een nieuwe losse ronde een lege invoerrij; IDs worden bij import aangemaakt. Voeg een moment bij een bestaande ronde bij voorkeur op de website toe. Verander rondegegevens op de website, of consequent op alle rijen van die ronde. Sorteer niet één losse kolom: de volledige rij inclusief verborgen IDs moet bij elkaar blijven. Gebruik zo nodig websitebeheer voor bewerkingen die de werkbladbeveiliging blokkeert.</p>
+<p><strong>Excel-werkbladbeveiligingswachtwoord: <code>structuur</code>.</strong> Dit is uitsluitend invoer-/structuurbescherming tegen onbedoelde wijzigingen, <strong>geen echte beveiliging</strong>, geen versleuteling en geen toegangscontrole. Via Controleren → Beveiliging blad opheffen kun je dit wachtwoord gebruiken. Het staat ook op Lees mij. Laat formules, verborgen lijsten, metadata en IDs intact.</p>
+<p>Capaciteit: 1200 momenten en 200 toetslinkregels. Een grotere website-export wordt geweigerd in plaats van stilzwijgend afgekapt. Gebruik <code>.xlsx</code>, geen macrobestand. Plakken kan Excel-keuzelijsten omzeilen; daarom controleert de website alle invoer opnieuw. Formules in invoervelden zijn niet toegestaan.</p>
+<p>Uploaden vervangt de actieve momentlijst: ontbrekende bestaande rijen worden als vervallen voorgesteld, niet stilzwijgend behouden. Bewaar dus alle niet-gewijzigde rijen. Drie bronrondes zonder momenten blijven afzonderlijk behouden. Een volledig lege import wordt geblokkeerd. Bestaande v2-Excel wordt bij de oorspronkelijke basisversie nog herkend en gemigreerd; gebruik daarna het nieuwe format. Een verouderde basisversie wordt geweigerd.</p>
+<h2>8. Jaarovergang</h2>
+<p>Kies <strong>Nieuw collegejaar</strong>. Download de weekstructuur, vul de nieuwe kalender in en controleer vakanties/feestdagen. Een opgegeven eerste maandag levert uitsluitend een rekenvoorstel, geen vastgestelde onderwijsjaarkalender. Vul de instellingen, weekkoppelingen, regels en uitzonderingen in. Zet <strong>Kalender gecontroleerd</strong> pas op Ja na echte inhoudelijke controle.</p>
+<p>Upload de kalender. Controleer het concept, waarschuwingen en eventuele handmatige datums. Je kunt het concept-rooster als vereenvoudigde Excel downloaden en in dezelfde jaarovergang teruglezen. Bevestig apart en download de nieuwe HTML. Het vorige jaar blijft daarin via het collegejaarmenu beschikbaar. Er wordt niet automatisch gepubliceerd.</p>
+<p>HTT3 vervalt automatisch vanaf <strong>2027-2028</strong>. De vervallen bronrondes blijven in het migratiearchief; de toets staat niet meer in de nieuwe momentkeuzelijsten. De oorspronkelijke 2026-2027-versie blijft intact. Jaarovergangstoetsen zijn uitgevoerd met een synthetische kalender, niet met een door Fontys vastgestelde kalender voor 2027-2028.</p>
+<h2>9. Outlook en agenda</h2>
+<p>Studenten kunnen gekozen momenten als <code>.ics</code> downloaden. Dit is een momentopname, geen inschrijving en geen gegarandeerde synchronisatie. Herhaald importeren kan dubbele afspraken geven. Bij onbekende tijden of tijdvensters wordt geen persoonlijke afnametijd verzonnen.</p>
+<p>In <strong>Beheer → Outlook</strong> kies je een gecontroleerde versie, doelgroep en soorten momenten. Download ICS, Outlook-Excel of JSON. Alleen hier kan de beheerder ook Beoordelingsdeadline meenemen; neem die niet mee in een studentenagenda. Onopgeloste migratierondes en bestaande geblokkeerde momenten worden overgeslagen en geteld.</p>
+<p>Titels hebben de vorm <strong>KVV | TGO Voltijd P-fase | Toetsafname</strong>. Voor uitfaserend komt de kans vóór het momenttype, bijvoorbeeld <strong>CGI | Uitfaserend Deeltijd | Tweede kans | Toetsafname</strong>. Een gedeeld moment krijgt in de beheeruitvoer een afzonderlijke afspraak per doelgroep. Sleutels blijven stabiel bij datumwijzigingen; extra doelgroepen krijgen een eigen suffix. Het veranderen/verwijderen van een doelgroep levert expliciete vervalsleutels op, geen automatische verwijdering.</p>
+<p>De categorieën zijn TOETS rood, INLEVEREN oranje, INSCHRIJVEN blauw, BEOORDELING paars en INZAGE groen. ICS bevat CATEGORIES en COLOR, Excel/JSON bevatten de naam en kleur. Outlook hoeft een ICS-kleur niet automatisch over te nemen. Richt in de testmailbox eerst de vijf categorieën in met de juiste kleur. De Graph-kleuren zijn preset0, preset1, preset7, preset8 en preset4. De helper zet de categorienaam op de afspraak; hij maakt of wijzigt de mastercategorielijst niet. Zie de <a href="https://learn.microsoft.com/en-us/graph/api/resources/outlookcategory?view=graph-rest-1.0">officiële Microsoft-documentatie over Outlook-categorieën</a>.</p>
+<p>Een puntdeadline krijgt in de beheerexport een technische duur van 15 minuten; dat is geen toetsduur. Momenten zonder unieke tijd kunnen als hele-dagvermelding verschijnen. Controleer deze altijd op betekenis voordat je ze importeert.</p>
+<p>Outlook-invoer wordt eerst een voorstel. Alleen rijen met <strong>Verwerken = Ja</strong> tellen mee. Datum, tijd en status worden gecontroleerd tegen de basisversie en stabiele sleutel. Ontbrekende rijen verwijderen niets. Tegenstrijdige wijzigingen voor verschillende doelgroepen van hetzelfde gedeelde moment worden geweigerd. Bevestiging en een nieuwe HTML-download blijven nodig.</p>
+<p><code>Outlook/Outlook-helper.ps1</code> is uitsluitend voorbereid, niet uitgevoerd met Microsoft 365. Lees <code>Outlook/INRICHTEN.html</code> vóór eventueel later gebruik. Een echte Outlook-import, tenantrechten, kleurweergave en de helper moeten eerst met jouw toestemming in een aparte testagenda worden beproefd. Dit pakket heeft niets aangemaakt, bijgewerkt of verwijderd in Outlook.</p>
+<h2>10. Controle vóór eventuele publicatie</h2>
+<ul>
+<li>Herstel de 64 migratiecontroles en de drie ontbrekende ENG-planningen met het officiële rooster.</li>
+<li>Vul de exacte Progress-/Gradework-links in en test zelf de bestemmingen met de juiste studentrechten.</li>
+<li>Controleer de kalender, kansen, uitzonderingen, bronblokkades en meervoudige tijden.</li>
+<li>Open de Excel in jullie eigen Excel-versie en controleer de afhankelijke keuzelijsten, datumformules en werkbladbeveiliging.</li>
+<li>Test een kleine ICS/JSON-selectie in een aparte Outlook-testagenda, inclusief kleuren, herhaalde verwerking en teruglezen.</li>
+<li>Geef pas daarna afzonderlijk opdracht om een live versie te publiceren. De huidige GitHub-index blijft tot die tijd ongewijzigd.</li>
+</ul>
+<h2>11. Bestanden en technisch onderhoud</h2>
+<p>De test-HTML is zelfvoorzienend. De vereenvoudigde Excel is voor bulkbeheer. Deze handleiding en het testrapport leggen gebruik en testgrenzen vast. <code>migratiecontrole.json</code> bevat de controlepunten en het behoudsarchief; behandel dit als beheerbestand. <code>src/domain.js</code> bevat de centrale regels, <code>src/evls.json</code> de EvL-catalogus, en <code>src/simple-engine.js</code>/<code>src/editor.js</code> de nieuwe import/export- en formulierlaag bovenop v2.</p>
+<p>Wijzigingen in losse bronbestanden worden niet vanzelf in de zelfstandige HTML geladen. De map <code>onderhoud</code> bevat een bundelscript om de embedded programmabestanden en Excel-template opnieuw in de bestaande test-HTML op te nemen. Gebruik daarvoor Node.js; wijzig geen live index. De testbestanden bevatten geen proefwijzigingen uit de geautomatiseerde beheertests.</p>
+</main></body></html>
