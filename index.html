@@ -2,8 +2,8 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="no-referrer" name="referrer"/><meta content="Toetswijzer Pabo Sittard 2026-2027: vier jaartoetsroosters, deadlines en persoonlijke planning." name="description"/>
-<title>Toetswijzer Pabo Sittard</title>
+<meta content="no-referrer" name="referrer"/><meta content="Toetswijzer voor Pabo Sittard: toets- en inlevermomenten, deadlines en persoonlijke jaarplanner." name="description"/>
+<title>Toetswijzer | Pabo Sittard</title>
 <style>:root{--purple:#663366;--magenta:#e6007e;--ink:#2e2939;--muted:#696274;--line:#ded8e5;--bg:#f7f5f9;--reg:#27629d;--exam:#7540a1;--submit:#007784;--red:#a92a35;--amber:#8b6018;--soft:#f3eef6}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:14px/1.55 Roboto,'Segoe UI',Arial,sans-serif;color:var(--ink)}button,input,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.48}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #ad549a;outline-offset:4px}button,a{border-radius:5px}a{color:var(--purple)}[hidden]{display:none!important}
 .skip{position:absolute;left:12px;top:-100px;background:white;padding:10px;z-index:20}
 .skip:focus{top:6px}
@@ -1287,7 +1287,7 @@ function buildHTML(source,data,cfg,security,spec){
  const archive=JSON.parse(archiveNode.textContent||'{}');if(previous.year!==data.year)archive[previous.year]={data:previous,config:previousCfg};delete archive[data.year];archiveNode.textContent=safeJSON(archive);
  doc.title='Toetswijzer Pabo Sittard | '+data.year+' | v2';
  const yr=doc.querySelector('.tool-title small');if(yr)yr.textContent=data.year;
- const description=doc.querySelector('meta[name=description]');if(description)description.setAttribute('content','Toetswijzer Pabo Sittard '+data.year+': roosters en gecontroleerde planning.');
+ const description=doc.querySelector('meta[name=description]');if(description)description.setAttribute('content','Toetswijzer voor Pabo Sittard: toets- en inlevermomenten, deadlines en persoonlijke jaarplanner.');
  for(const [id,value] of [['rooster-data',data],['toetswijzer-config',cfg],['beheer-config',security]]){const el=doc.getElementById(id);if(!el)throw Error('Websitebron mist '+id);el.textContent=safeJSON(value);}
  doc.documentElement.classList.remove('app-ready');doc.getElementById('main').innerHTML='';doc.getElementById('dialog-content').innerHTML='';doc.getElementById('dialog').removeAttribute('open');
  const old=doc.getElementById('read-only');const frag=doc.createElement('div');frag.innerHTML=readOnly(data,cfg,spec);if(old)old.replaceWith(frag.firstElementChild);else doc.getElementById('main').before(frag.firstElementChild);
