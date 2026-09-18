@@ -13,5 +13,5 @@ Gebruik de beheerknop rechtsonder in de Toetswijzer. De Excel is bedoeld voor bu
 ## Bestanden
 
 - `index.html` — de gepubliceerde Toetswijzer
-- `Toetswijzer_vereenvoudigd.xlsx` — beheer-Excel
+- `Toetswijzer-invulbladen.xlsx` — beheer-Excel
 - [Handleiding](Handleiding.html) — werkwijze voor beheer
