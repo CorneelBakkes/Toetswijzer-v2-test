@@ -1565,14 +1565,29 @@ return {create,buildHTML,passwordHash};
                 h += `<div class="followup ${eventPast(e) ? 'past-item' : ''}"><span class="follow-label">${name}</span><div>${esc(range(e.start, e.end))}${e.time ? ' - ' + esc(e.time) : ''}${e.note ? '<div class="follow-time">' + esc(e.note) + '</div>' : ''}</div>${k==='publish'?serviceButton(r,'gradework'):''}${agendaButton(r, e.id)}</div>`;
     } return h ? `<div class="followups">${h}</div>` : ''; }
     function tifButtons(r) {if(!TW21.targets(r).some(id=>id.startsWith('vt-')||id.startsWith('dt-')))return '';const catalog=JSON.parse(document.getElementById('evl-catalog').textContent);return '<details class="panel"><summary>EvL’s en toetsinformatie (TIF)</summary>'+catalog.filter(e=>r.evls.includes('ALLE_EVL')||r.evls.includes(e.id)).map(e=>'<p>'+esc(e.id+' — '+e.name)+(e.tif?' <a href="'+esc(e.tif)+'" target="_blank" rel="noopener noreferrer">Bekijk TIF</a>':' — geen TIF-link aangeleverd')+'</p>').join('')+'</details>';}
+    function periodCard(r,kind,title,deadlineLabel,service) {
+        const start=eventRole(r,kind,'start'),deadline=eventRole(r,kind,'deadline');
+        if(!start&&!deadline)return '';
+        const first=start||deadline,last=deadline||start;
+        const when=range(first.start,last.end);
+        const detail=e=>e?fmt(e.role==='deadline'?e.end:e.start)+(e.time?' · '+e.time:''):'';
+        const links=(service?serviceButton(r,service,service==='progress'?'Open Progress':'Open GradeWork'):'')+
+            (start?agendaButton(r,start.id,'Start in agenda'):'')+
+            (deadline?agendaButton(r,deadline.id,'Deadline in agenda'):'' );
+        return '<div class="moment-card period-card '+(eventPast(last)?'past-item':'')+'"><div class="moment-info"><span class="moment-label">'+esc(title)+'</span><strong>'+esc(when)+'</strong>'+
+            (start?'<span class="moment-note"><b>Start:</b> '+esc(detail(start))+'</span>':'')+
+            (deadline?'<span class="moment-note"><b>'+esc(deadlineLabel)+':</b> '+esc(detail(deadline))+'</span>':'')+
+            '</div><div class="moment-actions">'+links+'</div></div>';
+    }
     function timeline(r) {
-        const all=(r.events||[]).filter(e=>TW21.type(e)?.student).sort((a,b)=>(a.start+a.id).localeCompare(b.start+b.id));
-        if(!all.length)return '<p class="note">Er zijn nog geen studentmomenten bekend.</p>';
-        return '<section class="student-moments"><h3>Belangrijke momenten</h3><div class="moment-list">'+all.map(e=>{
+        const all=(r.events||[]).filter(e=>TW21.type(e)?.student&&!['register','submit'].includes(e.kind)).sort((a,b)=>(a.start+a.id).localeCompare(b.start+b.id));
+        const periods=[periodCard(r,'register','Intekenperiode','Intekendeadline','progress'),periodCard(r,'submit','Inleverperiode','Inleverdeadline','')].filter(Boolean);
+        if(!all.length&&!periods.length)return '<p class="note">Er zijn nog geen studentmomenten bekend.</p>';
+        return '<section class="student-moments"><h3>Belangrijke momenten</h3><div class="moment-list">'+periods.concat(all.map(e=>{
             const when=range(e.start,e.end)+(e.time?' · '+e.time:'');
             const service=['register','withdraw'].includes(e.kind)?serviceButton(r,'progress','Open Progress'):e.kind==='publish'?serviceButton(r,'gradework'):'';
             return '<div class="moment-card '+(eventPast(e)?'past-item':'')+'"><div class="moment-info"><span class="moment-label">'+esc(e.label)+'</span><strong>'+esc(when)+'</strong>'+(e.note?'<span class="moment-note">'+esc(e.note)+'</span>':'')+'</div><div class="moment-actions">'+service+agendaButton(r,e.id)+'</div></div>';
-        }).join('')+'</div></section>';
+        })).join('')+'</div></section>';
     }
     function details(r) {
         const buttons=[action('focus-code','Bekijk alle momenten van '+esc(r.code==='PORT'?'portfolio inleveren':r.title),'ghost','data-key="'+esc(r.id)+'"')];
